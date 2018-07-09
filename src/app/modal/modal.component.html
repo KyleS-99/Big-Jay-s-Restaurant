@@ -1,0 +1,19 @@
+<div class="modal-container" @fade>
+	<div class="modal-content-container">
+		<div class="modal-content">
+			<div class="icon active-menu" (click)="closeModal()">
+				<div class="hamburger"></div>
+			</div>
+			<h1 class="title">Full Menu</h1>
+			<hr>
+			<div class="content">
+				<h3 class="type">Lunch & Dinner</h3>
+				<p *ngFor="let item of menuItems"><span class="bold">{{ item.name }}</span>{{ item.desc | shorten:width }} <span class="bold">${{ item.price }}</span></p>
+			</div>
+			<div class="content">
+				<h3 class="type">Desserts</h3>
+				<p *ngFor="let item of dessert"><span class="bold">{{ item.name }}</span>{{ item.desc | shorten:width }} <span class="bold">${{ item.price }}</span></p>
+			</div>
+		</div>
+	</div>
+</div>

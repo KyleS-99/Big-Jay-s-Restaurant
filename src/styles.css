@@ -1,0 +1,174 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container-md {
+    display: block;
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;    
+}
+
+.container-full {
+    display: block;
+    width: 100%;
+    margin: 0 auto;  
+}
+
+h1.title {
+    font-size: 3rem;
+    color: #443731;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    top: -7px;
+    height: 4px;
+    width: 65px;
+    background-color: #f9c83c;
+    border: 0;
+    margin: 0 auto;
+}
+
+.icon {
+    float: right;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger {
+    z-index: 20;
+    position: absolute;
+    width: 42px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    margin: 38px 20px;
+    transition: .5s;
+}
+
+.hamburger:before, .hamburger:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    width: 42px;
+    height: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 13px -2px rgba(0, 0, 0, 0.75);
+    transition: .5s;
+}
+
+.hamburger:before {
+    top: -9px;
+    background-color: #fff;
+}
+
+.hamburger:after {
+    top: 9px;
+    background-color: #fff;
+}
+
+.icon.active-menu .hamburger {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.icon.active-menu {
+    display: block;
+}
+
+.icon.active-menu .hamburger:before {
+    top: 0;
+    transform: rotate(45deg);
+    width: 42px;
+}
+
+.icon.active-menu .hamburger:after {
+    top: 0;
+    width: 42px;
+    transform: rotate(135deg);
+}
+
+div.modal-container {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+div.modal-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 1001;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    min-height: 600px;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+div.modal-content {
+    position: relative;
+}
+
+div.modal-content h1 {
+    padding-top: 5rem;
+}
+
+div.modal-content .hamburger, div.modal-content .hamburger::after, div.modal-content .hamburger::before {
+    background-color: #f9c83c;
+    width: 35px;
+}
+
+@media(max-width: 768px) {
+    div.modal-container div.modal-content-container {
+        min-height: 100vh;
+        width: 100vw;
+        position: initial;
+        transform: none;
+    }
+}

@@ -1,0 +1,102 @@
+div.input-container {
+    margin-top: 4rem;
+
+    input, select {
+        display: block;
+        width: 75%;
+        max-width: 400px;
+        font-size: 1.3rem;
+        margin: 1rem auto;
+        border: none;
+        outline: none;
+        text-align: center;
+        border: 3px solid #f9c83c;
+        border-radius: 100px;
+        padding: 7px 15px;
+        -webkit-transition: border 230ms ease-out 230ms;
+        -moz-transition: border 230ms ease-out 230ms;
+        -o-transition: border 230ms ease-out 230ms;
+        transition: border 230ms ease-out 230ms;
+    }
+
+    select {
+        text-align-last: center;
+    }
+
+    button {
+        font-size: 1.3rem;
+        display: block;
+        width: 30%;
+        padding: 0.4rem 0.7rem;
+        margin: 1rem auto;
+        height: 50px;
+        color: #fff;
+        background-color: #f9c83c;
+        border: none;
+        outline: none;
+        border-radius: 100px;
+        -webkit-transition: background-color 230ms ease-out 230ms;
+        -moz-transition: background-color 230ms ease-out 230ms;
+        -o-transition: background-color 230ms ease-out 230ms;
+        transition: background-color 230ms ease-out 230ms;
+    }
+
+    button:disabled {
+        -webkit-transition: background-color 230ms ease-out 230ms;
+        -moz-transition: background-color 230ms ease-out 230ms;
+        -o-transition: background-color 230ms ease-out 230ms;
+        transition: background-color 230ms ease-out 230ms;
+        background-color: rgba(249, 200, 60, 0.7);
+    }
+
+    div.helper {
+        width: 70%;
+        margin: 0.2rem auto;
+
+        p {
+            font-size: 1.3rem;
+            color: #ff471a;
+            text-align: center;
+        }
+    }
+
+    input.ng-touched.ng-invalid {
+        -webkit-transition: border 230ms ease-out 230ms;
+        -moz-transition: border 230ms ease-out 230ms;
+        -o-transition: border 230ms ease-out 230ms;
+        transition: border 230ms ease-out 230ms;
+        border: 3px solid #ff471a;
+    }
+
+    input.ng-valid, select {
+        -webkit-transition: border 230ms ease-out 230ms;
+        -moz-transition: border 230ms ease-out 230ms;
+        -o-transition: border 230ms ease-out 230ms;
+        transition: border 230ms ease-out 230ms;
+        border: 3px solid #00b300;
+    }
+}
+
+div.x {
+    position: relative;
+    top: -30px;
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    span.bold {
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 400px) {
+    div.input-container {
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    }
+}

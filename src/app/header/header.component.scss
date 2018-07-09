@@ -1,0 +1,158 @@
+header {
+    position: relative;
+    height: 60px;
+    min-height: 60px;
+    text-align: left;
+    line-height: 60px;
+    z-index: 20;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header nav {
+    line-height: 60px;
+    letter-spacing: 1px;
+    margin-left: 2.5rem;
+}
+
+header nav a {
+    margin-right: 20px;
+    padding: 1.1rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 60px;
+    float: right;
+}
+
+nav a i {
+    display: none;
+}
+
+div#logo-text h1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: #fff;
+    z-index: 200;
+
+    span#small {
+        font-weight: 300;
+    }
+}
+
+@-webkit-keyframes animat_show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes animat_show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@-o-keyframes animat_show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@-ms-keyframes animat_show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes animat_show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .icon.active-menu .hamburger:after, .icon.active-menu .hamburger:before {
+        background-color: #443731;
+    }
+
+    header {
+        background: initial;
+        box-shadow: none;
+        position: initial;
+        width: 100%;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.active-menu .hamburger {
+        position: fixed;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav.active {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        letter-spacing: 1px;
+        margin: 0;
+        background-color: #fff;
+        -webkit-animation: animat_show 0.5s;
+        -moz-animation: animat_show 0.5s;
+        -o-animation: animat_show 0.5s;
+        -ms-animation: animat_show 0.5s;
+        animation: animat_show 0.5s;
+    }
+
+    header nav.active a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #443731;
+        text-transform: uppercase;
+        width: 100%;
+        border: none;
+        position: relative;
+        top: 40%;
+        margin: 0px;
+
+        i {
+            display: inline;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media(max-height: 577px) {
+    header nav.active a {
+        top: 20%;
+    }
+}

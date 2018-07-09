@@ -1,0 +1,121 @@
+* {
+    color: #fff;
+}
+
+div#hero-banner {
+    margin-top: -60px;
+    max-height: 600px;
+    height: 60vh;
+    min-width: 100%;
+    min-height: 600px;
+    background: url('http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/6830/original_001.jpg') no-repeat, linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background: url('http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/6830/original_001.jpg') no-repeat, webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background: url('http://finedininglovers.cdn.crosscast-system.com/ImageAlbum/6830/original_001.jpg') no-repeat, moz-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 18% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 30% 100%, 0 80%);
+}
+
+.push-down {
+    position: relative;
+    top: 19vh;
+
+    .left {
+
+        h2.title {
+            font-size: 3.5rem;
+        }
+
+        p.quote {
+            font-size: 1.5rem;
+            position: relative;
+            top: -21px;
+        }
+
+        .btn {
+            width: 175px;
+            height: 50px;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 1.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            
+            &:first-of-type {
+                margin-right: 1.1rem;
+            }
+        }
+
+        .menu {
+            background-color: #fafaf9;
+            color: #443731;
+            -webkit-transition: background-color 500ms ease-in-out;
+            -moz-transition: background-color 500ms ease-in-out;
+            -o-transition: background-color 500ms ease-in-out;
+            transition: background-color 500ms ease-in-out;
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+
+        .book-a-table {
+            background-color: #f8bf20;
+            color: #fafaf9;
+            -webkit-transition: background-color 500ms ease-in-out;
+            -moz-transition: background-color 500ms ease-in-out;
+            -o-transition: background-color 500ms ease-in-out;
+            transition: background-color 500ms ease-in-out;
+
+            &:hover {
+                background-color: #faa31d;
+            }
+        }
+   }
+
+   .left, .right {
+       display: inline-block;
+   }
+
+    .right {
+        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+
+        p {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+            span.fade {
+                font-weight: initial;
+                color: #f2f2f2;
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .container-md {
+        width: 90%;
+    }
+
+    .right {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    div.left, div.right {
+        position: initial !important;
+        display: block !important;
+        float: none !important;
+        width: 100% !important;
+    }
+}

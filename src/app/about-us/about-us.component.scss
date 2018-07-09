@@ -1,0 +1,77 @@
+div.push-down {
+    margin-top: 2.5rem;
+    margin-bottom: 7rem;
+
+    .left {
+        display: inline-block;
+        width: 40%;
+        position: relative;
+
+        .losange, .losange div {
+            margin: 0 auto;
+            transform-origin: 50% 50%;
+            overflow: hidden;
+            width: 250px;
+            height: 250px;
+        }
+
+        .losange {
+            transform: rotate(45deg) translateY(10px);
+            border-radius: 5px;
+        }
+
+        .losange .los1 {
+            width: 355px;
+            height: 355px;
+            transform: rotate(-45deg) translateY(-74px);
+        }
+        
+        .losange .los1 img {
+            width: 200%;
+            height: auto;
+        }
+    }
+
+    .right {
+        display: inline-block;
+        width: 59%;
+
+        h1 {
+            text-align: left;
+        }
+
+        hr {
+            float: left;
+        }
+
+        p.about-text {
+            text-align: left;
+            font-size: 1.1rem;
+
+            &:first-of-type {
+                margin: 1.65rem 0 1.85rem 0;
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1050px) {
+    div.container div.left {
+        display: none;
+    }
+
+    div.container div.right {
+        display: block;
+        width: 100%;
+
+        h1 {
+            text-align: center;
+        }
+
+        hr {
+            float: none;
+        }
+    }
+}

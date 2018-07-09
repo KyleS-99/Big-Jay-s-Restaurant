@@ -1,0 +1,14 @@
+<header>
+	<div class="icon" (click)="toggleMenu()" [class.active-menu]="active">
+		<div class="hamburger"></div>
+	</div>
+	<nav [class.colors]="active" [ngClass]="{active: active}">
+		<a routerLink="about" fragment="about" routerLinkActive="active" (click)="closeMobileMenu()">About<i class="far fa-question-circle"></i></a>
+		<a routerLink="contact" fragment="contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact<i class="far fa-envelope"></i></a>
+		<a routerLink="menu" fragment="menu-list" routerLinkActive="active" (click)="closeMobileMenu()">Menu<i class="fas fa-utensils"></i></a>
+		<a routerLink="/" routerLinkActive="active" (click)="closeMobileMenu()">Home<i class="fas fa-home"></i></a>
+	</nav>
+</header>
+<div id="logo-text">
+	<a routerLink="/"><h1><span id="small">Big Jay's</span> BBQ</h1></a>
+</div>

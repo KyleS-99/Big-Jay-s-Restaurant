@@ -1,0 +1,32 @@
+<div class="modal-container" @fade>
+		<div class="modal-content-container">
+			<div class="modal-content">
+				<div class="icon active-menu" (click)="closeModal()">
+					<div class="hamburger"></div>
+				</div>
+				<h1 class="title">Reservation</h1>
+				<hr>
+				<div class="content">
+					<form (ngSubmit)="onSubmit(f)" #f="ngForm" [@fadeOut]="display">
+						<div class="input-container">
+							<input autocomplete="off" type="text" name="date" required ngModel placeholder="MM/DD" pattern="(([1-9]|1[0-2])/([01][1-9]|10|2[0-8]))|((0[13-9]|1[0-2])/(29|30))|((0[13578]|1[0-2])/31)" #date="ngModel">
+							
+							<input type="number" ngModel required name="amount" pattern="^[1-9]+[0-9]*$" #amount="ngModel" placeholder="Amout of people">
+							<select name="time" ngModel [(ngModel)]="default">
+								<option [value]="time" *ngFor="let time of avaTime">{{ time }}</option>
+							</select>
+							<button type="submit" [disabled]="!f.valid">Submit</button>
+						</div>
+					</form>
+					<div [@submitted]="submitted" class="content">
+						<div *ngIf="sub" class="x">
+							<h1>Reservation has been placed</h1>
+							<p>Date: <span class="bold">{{ storeData.date }}</span></p>
+							<p>Number of people: <span class="bold">{{ storeData.amount }}</span></p>
+							<p>Time: <span class="bold">{{ storeData.time }}</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

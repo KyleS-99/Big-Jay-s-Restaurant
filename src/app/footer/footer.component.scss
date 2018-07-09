@@ -1,0 +1,22 @@
+footer {
+    width: 100%;
+    min-height: 60px;
+    text-align: center;
+    background-color: #F9C83C;
+    color: #fff;
+    padding: 0 10px;
+
+    p {
+        line-height: 60px;
+        text-transform: capitalize;
+        font-size: 1rem;
+
+        span.bold {
+            text-transform: uppercase;
+        }
+
+        span.copy {
+            font-size: 1.1rem;
+        }
+    }
+}

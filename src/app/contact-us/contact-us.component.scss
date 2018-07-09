@@ -1,0 +1,66 @@
+div.push-down {
+    margin-top: 2.5rem;
+
+
+    div.container-full {
+        padding: 2.5rem 1rem;
+        margin: 3.25rem 0 4rem 0;
+        -webkit-box-shadow: 1px 1px 5px 0px rgba(77,77,77,0.6);
+        -moz-box-shadow: 1px 1px 5px 0px rgba(77,77,77,0.6);
+        box-shadow: 1px 1px 5px 0px rgba(77,77,77,0.6);
+
+        div.reservation-btn {
+            margin-top: 2.5rem;
+
+            button {
+                display: block;
+                width: 175px;
+                height: 50px;
+                color: #3385ff;
+                border: 2px solid #3385ff;
+                text-transform: uppercase;
+                background-color: #fff;
+                font-weight: bold;
+                margin: 0 auto;
+                border-radius: 5px;
+                -webkit-transition: all 500ms ease-in-out;
+                -moz-transition: all 500ms ease-in-out;
+                -o-transition: all 500ms ease-in-out;
+                transition: all 500ms ease-in-out;
+                font-size: 15px;
+                cursor: pointer;
+
+                i {
+                    margin-right: 7px;
+                    font-size: 1.1rem;
+                    position: relative;
+                    top: 1px;
+                }
+
+                &:hover {
+                    background-color: #3385ff;
+                    color: #fff;
+                }
+            }
+        }
+
+        div.left, div.right {
+            display: inline-block;
+            width: 49%;
+            background-color: #fff;
+            text-align: center;
+
+            h3 {
+                font-weight: bold;
+            }
+
+            p {
+                color: #999;
+
+                &:first-of-type {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+}
